@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>ServicePro - Services</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header id="main-header">
+    <h1>Nos services</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="service-section">
+      <h2>Consultation</h2>
+      <p>Nous offrons des conseils stratégiques pour optimiser votre entreprise.</p>
+    </section>
+
+    <section class="service-section">
+      <h2>Gestion de Projet</h2>
+      <p>Nous planifions et exécutons vos projets pour assurer leur succès.</p>
+    </section>
+
+    <section class="service-section">
+      <h2>Formation</h2>
+      <p>Des programmes pour améliorer les compétences de votre équipe.</p>
+    </section>
+   <br>
+    <!-- Nouveau service : Calcul de TVA -->
+    <section class="service-section">
+      <h2>Calcul de TVA</h2>
+      <form id="tva-form">
+        <label for="price">Prix HT (MAD) :</label>
+        <input type="number" id="price" step="0.01" required>
+        <label for="tva-rate">Taux de TVA (%) :</label>
+        <input type="number" id="tva-rate" step="0.01" value="20" required>
+        <button type="button" onclick="calculateTVA()">Calculer</button>
+      </form>
+      <p id="tva-result"></p>
+    </section>
+
+    <!-- Nouveau service : Calculatrice -->
+    <section class="service-section">
+      <h2>Calculatrice Basique</h2>
+      <form id="calculator-form">
+        <input type="number" id="num1" step="0.01" placeholder="Nombre 1" required>
+        <select id="operator">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" step="0.01" placeholder="Nombre 2" required>
+        <button type="button" onclick="calculate()">Calculer</button>
+      </form>
+      <p id="calc-result"></p>
+    </section>
+
+    <a href="contact.html" class="btn">Demander un devis</a>
+  </main>
+
+  <footer id="main-footer">
+    <p>Contactez-nous : <a href="mailto:contact@servicepro.com">contact@servicepro.com</a></p>
+    <p><small>© 2023 ServicePro. Tous droits réservés.</small></p>
+  </footer>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
